@@ -78,8 +78,3 @@ fabric.properties
 
 # CodeStream plugin
 .idea/codestream.xml
-
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
