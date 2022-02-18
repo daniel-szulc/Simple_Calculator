@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8"/>
-<title>Calculator</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<link rel="stylesheet" href="styles.css" type="text/css" />
-<script src="script.js" defer></script>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Simple Calculator - Daniel Szulc</title>
+	<link rel="icon" type="image/png" href="./favicon.png"/>
+	<link href="styles.css" rel="stylesheet">
+	<script src="script.js" defer></script>
 </head>
 <body>
 <div class="calculator-grid">
-    <div class="output">
-        <div data-previous_operand class="previous-operand">123 +</div>
-        <div data-current_operand class="current-operand">456</div>
-    </div>
-    <button data-all_clear class="span-two">AC</button>
-    <button data-delete>DEL</button>
-    <button data-operation>÷</button>
-    <button data-number>1</button>
-    <button data-number>2</button>
-    <button data-number>3</button>
-    <button data-operation>*</button>
-    <button data-number>4</button>
-    <button data-number>5</button>
-    <button data-number>6</button>
-    <button data-operation>+</button>
-    <button data-number>7</button>
-    <button data-number>8</button>
-    <button data-number>9</button>
-    <button data-operation>-</button>
-    <button data-number>,</button>
-    <button data-number>0</button>
-    <button data-equals class="span-two">=</button>
-
-
+	<div class="calculator-background"></div>
+	<div class="output">
+		<div data-previous-action class="previous-action"></div>
+		<div data-current-action class="current-action"></div>
+	</div>
+	<button data-all-clear style="--colorA: #ffc8c8; --colorB: #ff5858; --colorC: #ffb2b2" >AC</button>
+	<button data-clear style="--colorA: #ffc8c8; --colorB: #ff5858; --colorC: #ffb2b2" >C</button>
+	<button data-operation class="operation">÷</button>
+	<button data-operation class="operation">×</button>
+	<button data-number>7</button>
+	<button data-number>8</button>
+	<button data-number>9</button>
+	<button data-operation class="operation">-</button>
+	<button data-number>4</button>
+	<button data-number>5</button>
+	<button data-number>6</button>
+	<button data-operation class="operation">+</button>
+	<button data-number>1</button>
+	<button data-number>2</button>
+	<button data-number>3</button>
+	<button data-number class="span-column" >0</button>
+	<button data-number>.</button>
+	<button data-equals class="operation span-row" style="--colorA: #b7e0f5; --colorB: #0052D4; --colorC: #65C7F7">=</button>
 </div>
 </body>
 </html>
