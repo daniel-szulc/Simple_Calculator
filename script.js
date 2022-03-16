@@ -21,8 +21,8 @@ class Calculator {
 
 	selectOperation(operation)
 	{
-		if(operation=='/') operation='÷'
-		else if(operation=='*') operation='×'
+		if(operation==='/') operation='÷'
+		else if(operation==='*') operation='×'
 
 		if (this.currentAction === '') return
 
@@ -80,7 +80,7 @@ class Calculator {
 		if (isNaN(integerDigits)) {
 			integerDisplay = ''
 		} else {
-			integerDisplay = integerDigits.toLocaleString('pl', { maximumFractionDigits: 0 })
+			integerDisplay = Math.trunc(integerDigits);
 		}
 
 		if (decimalDigits != null) {
@@ -148,9 +148,9 @@ clearButton.addEventListener('click', () => {
 document.addEventListener("keydown", event => {
 	console.log(event.key)
 	if (event.isComposing) {
-		return;
+
 	}
-	else if(event.key=='Enter' || event.key=='=' )
+	else if(event.key==='Enter' || event.key==='=' )
 	{
 		calculator.compute()
 		calculator.updateDisplay()
